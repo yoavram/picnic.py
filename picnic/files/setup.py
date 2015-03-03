@@ -9,7 +9,7 @@ setup(name='$PACKAGE_NAME',
       version=__version__,
       author='$AUTHOR',
     description='',
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     license='see LICENSE.txt',
     keywords="",
     packages= find_packages(exclude='docs'))
