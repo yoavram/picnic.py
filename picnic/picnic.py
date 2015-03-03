@@ -9,7 +9,7 @@ Usage:
 Options:
   --author=<name>        Your name.
   --licence =<name>      MIT, LGPL
-  --dev                  Runs: sudo python setup.py develop
+  --dev                  Runs: python setup.py develop
   --sphinx               Initializes the sphinx documentation
   --gitinit              Runs: git init; git add . ; git commit -m "1st"
   --remote=<repo_url>    Runs:  git remote add origin <repo_url>
@@ -238,4 +238,4 @@ if __name__ == "__main__":
     
     if argv['--dev'] :
         
-        execute("sudo python setup.py develop")
+        execute("python setup.py develop")
