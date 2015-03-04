@@ -1,2 +1,2 @@
 make html
-firefox ../../built_docs/html/index.html
+x-www-browser ../../built_docs/html/index.html
