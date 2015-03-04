@@ -10,6 +10,7 @@ Options:
   --author=<name>        Your name.
   --licence =<name>      MIT, LGPL
   --dev                  Runs: python setup.py develop
+  --user                 Adds the --user option to develop so package will install locally
   --sphinx               Initializes the sphinx documentation
   --gitinit              Runs: git init; git add . ; git commit -m "1st"
   --remote=<repo_url>    Runs:  git remote add origin <repo_url>
@@ -105,7 +106,7 @@ if __name__ == "__main__":
 
         # root repository (setup.py etc.)
 
-        for f in [ "README.rst",
+        for f in [ "README.md",
                    "MANIFEST.in" ,
                    "LICENCE.txt",
                    "setup.py",
@@ -237,5 +238,7 @@ if __name__ == "__main__":
     
     
     if argv['--dev'] :
-        
-        execute("python setup.py develop")
+        cmd = "python setup.py develop"
+        if argv['--user']:
+           cmd += ' --user' 
+        execute(cmd)
